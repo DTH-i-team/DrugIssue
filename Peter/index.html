@@ -9,19 +9,19 @@
 <div id="alcohol_use" style="width:100%; height:400px;"></div>
 <script type="text/javascript">
 
-$(function () { 
+$(function () {
     $('#alcohol_use').highcharts({
         chart: {
             type: 'column'
         },
-        
+
         title: {
             text: 'Think back over the last two weeks. How many times have you had five or more drinks at a sitting?'
         },
 
         xAxis: {
             title: {
-                text: 'Responses'
+                text: 'Number of Sittings'
             },
             categories: ['None', 'Once', 'Twice', '3 to 5 times', '6 to 9 times', '10 or more times']
         },
@@ -67,13 +67,17 @@ $(function () {
 
         series: [{
             name: 'Male',
-            data: [(119), (29), (32), (37), (7), (5)]
+            data: [(119), (29), (32), (37), (7), (5)],
+						color: "#94DFF7"
+
         }, {
             name: 'Female',
-            data: [(240), (52), (40), (26), (6), (1)]
+            data: [(240), (52), (40), (26), (6), (1)],
+						color: "#3B4A54"
         }, {
             name: 'Unknown',
-            data: [0,0,0,0,(1),0]
+            data: [0,0,0,0,(1),0],
+						color: "#223F54"
         }
         ]
     });
