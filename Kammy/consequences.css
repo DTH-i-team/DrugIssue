@@ -1,0 +1,17 @@
+#consequence_chart {
+	/*Changing these will screw up the icon layout. 
+	go to pictograph.js and adjust the "set vertical packing" 
+	and "set horizontal packing" to fix*/
+	width:450px; 
+	height:500px;
+}
+
+#consequence_list { /*the div of all the consequences*/
+}
+
+.consequence { /*each consequence*/
+}
+
+.selected {
+	color: red;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alcohol Use</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+<div id="alcohol_use" style="width:100%; height:400px;"></div>
+<script type="text/javascript">
+
+$(function () { 
+    $('#alcohol_use').highcharts({
+        chart: {
+            type: 'column'
+        },
+        
+        title: {
+            text: 'Think back over the last two weeks. How many times have you had five or more drinks at a sitting?'
+        },
+
+        xAxis: {
+            title: {
+                text: 'Responses'
+            },
+            categories: ['None', 'Once', 'Twice', '3 to 5 times', '6 to 9 times', '10 or more times']
+        },
+
+        yAxis: {
+            min: '0',
+            title: {
+                text: 'Number of respondents'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+
+        legend: {
+            align: 'right',
+            x: -30,
+            verticalAlign: 'top',
+            y: 25,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+            borderColor: '#CCC',
+            borderWidth: 1,
+            shadow: false
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 3px black'
+                    }
+                }
+            }
+        },
+
+        series: [{
+            name: 'Male',
+            data: [(119), (29), (32), (37), (7), (5)]
+        }, {
+            name: 'Female',
+            data: [(240), (52), (40), (26), (6), (1)]
+        }, {
+            name: 'Unknown',
+            data: [0,0,0,0,(1),0]
+        }
+        ]
+    });
+});
+
+</script>
+</body>
+</html>
