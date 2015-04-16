@@ -1,0 +1,21 @@
+.wrapper{
+  width:274px;
+  max-height:400px;
+  height:0px;
+
+}
+img{
+  display:inline;
+  vertical-align:text-bottom!important;
+}
+.borderblack{
+  border: 5px solid black;
+  border-radius:3px;
+}
+#statBox{
+  padding-top: 55px;
+  padding-left: 55px;
+}
+#warning{
+  color:red;
+}
